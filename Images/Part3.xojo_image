@@ -1,0 +1,40 @@
+#tag MultiImage
+Image Part3
+	#tag ImageRepresentation
+		SaveInfo = APHRcwECAQAAAAAxRzpcX0dpdFxQS0NFIERlbW9cWGVyby1QS0NFLURlbW9cSW1hZ2VzXFBhcnQzLnBuZwMAAAAAAQAEAAAAAAEAAAAAAAAA
+		FullPath = G:\_Git\PKCE Demo\Xero-PKCE-Demo\Images\Part3.png
+		PartialPath = Images\Part3.png
+		#tag ImageSpecification
+			Comment = 
+			Device = 31
+			HSize = 557.00
+			Orientation = Any
+			Platform = 15
+			PPI = 72
+			VSize = 123.00
+		#tag EndImageSpecification
+	#tag EndImageRepresentation
+	#tag ImageRepresentation
+		#tag ImageSpecification
+			Comment = 
+			Device = 31
+			HSize = 557.00
+			Orientation = Any
+			Platform = 15
+			PPI = 144
+			VSize = 123.00
+		#tag EndImageSpecification
+	#tag EndImageRepresentation
+	#tag ImageRepresentation
+		#tag ImageSpecification
+			Comment = 
+			Device = 31
+			HSize = 557.00
+			Orientation = Any
+			Platform = 15
+			PPI = 216
+			VSize = 123.00
+		#tag EndImageSpecification
+	#tag EndImageRepresentation
+End Image
+#tag EndMultiImage
