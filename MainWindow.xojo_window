@@ -128,16 +128,17 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   414
+         Top             =   407
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   108
       End
-      Begin TextField StateField
+      Begin TextArea StateField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   False
+         AllowStyledText =   True
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
@@ -149,19 +150,23 @@ Begin Window MainWindow
          FontUnit        =   0
          Format          =   ""
          HasBorder       =   True
-         Height          =   22
-         Hint            =   ""
+         HasHorizontalScrollbar=   False
+         HasVerticalScrollbar=   True
+         Height          =   68
+         HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
          Left            =   600
+         LineHeight      =   0.0
+         LineSpacing     =   1.0
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
          LockRight       =   False
          LockTop         =   True
          MaximumCharactersAllowed=   0
-         Password        =   False
+         Multiline       =   True
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   3
@@ -171,9 +176,10 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   380
+         Top             =   327
          Transparent     =   False
          Underline       =   False
+         UnicodeMode     =   0
          ValidationMask  =   ""
          Visible         =   True
          Width           =   206
@@ -207,7 +213,7 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   348
+         Top             =   294
          Transparent     =   False
          Underline       =   False
          Visible         =   True
@@ -231,7 +237,7 @@ Begin Window MainWindow
          HasBorder       =   True
          HasHorizontalScrollbar=   False
          HasVerticalScrollbar=   True
-         Height          =   70
+         Height          =   136
          HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
@@ -255,7 +261,7 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   266
+         Top             =   146
          Transparent     =   False
          Underline       =   False
          UnicodeMode     =   1
@@ -292,61 +298,11 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   228
+         Top             =   114
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   108
-      End
-      Begin Textarea CodeVerifierField
-         AllowAutoDeactivate=   True
-         AllowFocusRing  =   True
-         AllowSpellChecking=   False
-         AllowStyledText =   True
-         AllowTabs       =   False
-         BackgroundColor =   &cFFFFFF00
-         Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
-         Enabled         =   True
-         FontName        =   "System"
-         FontSize        =   0.0
-         FontUnit        =   0
-         Format          =   ""
-         HasBorder       =   True
-         HasHorizontalScrollbar=   False
-         HasVerticalScrollbar=   True
-         Height          =   45
-         HideSelection   =   True
-         Index           =   -2147483648
-         InitialParent   =   "StagePanel"
-         Italic          =   False
-         Left            =   600
-         LineHeight      =   0.0
-         LineSpacing     =   1.0
-         LockBottom      =   False
-         LockedInPosition=   False
-         LockLeft        =   True
-         LockRight       =   False
-         LockTop         =   True
-         MaximumCharactersAllowed=   0
-         Multiline       =   True
-         ReadOnly        =   False
-         Scope           =   2
-         TabIndex        =   7
-         TabPanelIndex   =   2
-         TabStop         =   True
-         Text            =   ""
-         TextAlignment   =   0
-         TextColor       =   &c00000000
-         Tooltip         =   ""
-         Top             =   180
-         Transparent     =   False
-         Underline       =   False
-         UnicodeMode     =   0
-         ValidationMask  =   ""
-         Visible         =   True
-         Width           =   206
       End
       Begin Label Label2
          AllowAutoDeactivate=   True
@@ -361,7 +317,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   600
+         Left            =   828
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -377,7 +333,7 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   148
+         Top             =   92
          Transparent     =   False
          Underline       =   False
          Visible         =   True
@@ -476,7 +432,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   818
+         Left            =   828
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -488,7 +444,7 @@ Begin Window MainWindow
          TabPanelIndex   =   2
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   47
+         Top             =   293
          Transparent     =   False
          Underline       =   False
          Visible         =   True
@@ -517,7 +473,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   818
+         Left            =   828
          LineHeight      =   0.0
          LineSpacing     =   1.0
          LockBottom      =   False
@@ -536,13 +492,13 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   80
+         Top             =   327
          Transparent     =   False
          Underline       =   False
          UnicodeMode     =   1
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   363
+         Width           =   353
       End
       Begin PushButton AuthorizeButton
          AllowAutoDeactivate=   True
@@ -558,7 +514,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   818
+         Left            =   1077
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -570,7 +526,7 @@ Begin Window MainWindow
          TabPanelIndex   =   2
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   227
+         Top             =   473
          Transparent     =   False
          Underline       =   False
          Visible         =   True
@@ -1574,7 +1530,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   600
+         Left            =   828
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -1586,7 +1542,7 @@ Begin Window MainWindow
          TabPanelIndex   =   2
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   114
+         Top             =   58
          Transparent     =   False
          Underline       =   False
          Visible         =   True
@@ -1709,6 +1665,56 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   354
       End
+      Begin Textarea CodeVerifierField
+         AllowAutoDeactivate=   True
+         AllowFocusRing  =   True
+         AllowSpellChecking=   False
+         AllowStyledText =   True
+         AllowTabs       =   False
+         BackgroundColor =   &cFFFFFF00
+         Bold            =   False
+         DataField       =   ""
+         DataSource      =   ""
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Format          =   ""
+         HasBorder       =   True
+         HasHorizontalScrollbar=   False
+         HasVerticalScrollbar=   True
+         Height          =   158
+         HideSelection   =   True
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         Italic          =   False
+         Left            =   828
+         LineHeight      =   0.0
+         LineSpacing     =   1.0
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         MaximumCharactersAllowed=   0
+         Multiline       =   True
+         ReadOnly        =   False
+         Scope           =   2
+         TabIndex        =   7
+         TabPanelIndex   =   2
+         TabStop         =   True
+         Text            =   ""
+         TextAlignment   =   0
+         TextColor       =   &c00000000
+         Tooltip         =   ""
+         Top             =   124
+         Transparent     =   False
+         Underline       =   False
+         UnicodeMode     =   0
+         ValidationMask  =   ""
+         Visible         =   True
+         Width           =   353
+      End
    End
    Begin Canvas AuthStages
       AllowAutoDeactivate=   True
@@ -1739,7 +1745,6 @@ Begin Window MainWindow
    End
    Begin URLConnection ExchangeConnection
       AllowCertificateValidation=   False
-      Enabled         =   True
       HTTPStatusCode  =   0
       Index           =   -2147483648
       LockedInPosition=   False
@@ -1748,7 +1753,6 @@ Begin Window MainWindow
    End
    Begin URLConnection TenantsConnection
       AllowCertificateValidation=   False
-      Enabled         =   True
       HTTPStatusCode  =   0
       Index           =   -2147483648
       LockedInPosition=   False
@@ -1757,7 +1761,6 @@ Begin Window MainWindow
    End
    Begin URLConnection Connection
       AllowCertificateValidation=   False
-      Enabled         =   True
       HTTPStatusCode  =   0
       Index           =   -2147483648
       LockedInPosition=   False
@@ -1766,7 +1769,6 @@ Begin Window MainWindow
    End
    Begin URLConnection RefreshConnection
       AllowCertificateValidation=   False
-      Enabled         =   True
       HTTPStatusCode  =   0
       Index           =   -2147483648
       LockedInPosition=   False
@@ -1774,7 +1776,6 @@ Begin Window MainWindow
       TabPanelIndex   =   0
    End
    Begin Timer MoveOnTimer
-      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Period          =   2000
@@ -1801,7 +1802,7 @@ End
 		  + "response_type=code" _
 		  + "&client_id=" + ClientID _
 		  + "&redirect_uri=" + Redirect_URI _
-		  + "&scope=" + Scope _
+		  + "&scope=" + EncodeURLComponent(Scope) _
 		  + "&state=" + State _
 		  + "&code_challenge=" + Challenge(CodeVerifierField.Text) _
 		  + "&code_challenge_method=S256"
@@ -2032,7 +2033,8 @@ End
 	#tag Event
 		Sub Action()
 		  If CommandMenu.SelectedRowIndex < 0 _
-		    Or EndpointMenu.SelectedRowIndex < 0 Then
+		    Or EndpointMenu.SelectedRowIndex < 0 _
+		    Or TenantsMenu.SelectedRowIndex < 0 Then
 		    Return
 		  End If
 		  
@@ -2045,6 +2047,7 @@ End
 		  Connection.RequestHeader("Accept") = "application/json"
 		  Connection.RequestHeader("Xero-tenant-id") = TenantID
 		  Connection.Send(Command, "https://api.xero.com/api.xro/2.0/" + EndPoint)
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents

@@ -81,6 +81,16 @@ End
 		  
 		End Sub
 	#tag EndEvent
+	#tag Event
+		Sub TitleChanged(newTitle as String)
+		  #If TargetMacOS
+		    If newTitle.BeginsWith("localhost:8888/callback") Then
+		      Result = "http://" + newTitle
+		      Self.Close
+		    End If
+		  #endif
+		End Sub
+	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
