@@ -68,11 +68,6 @@ End
 
 #tag Events Authorizer
 	#tag Event
-		Sub DocumentBegin(url as String)
-		  System.DebugLog(url)
-		End Sub
-	#tag EndEvent
-	#tag Event
 		Sub DocumentComplete(url as String)
 		  If url.BeginsWith("http://localhost:8888/callback") Then
 		    Result = url
@@ -83,6 +78,8 @@ End
 	#tag EndEvent
 	#tag Event
 		Sub TitleChanged(newTitle as String)
+		  System.DebugLog(newTitle)
+		  
 		  #If TargetMacOS
 		    If newTitle.BeginsWith("localhost:8888/callback") Then
 		      Result = "http://" + newTitle

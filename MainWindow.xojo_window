@@ -52,7 +52,7 @@ Begin Window MainWindow
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   4
+      Value           =   1
       Visible         =   True
       Width           =   612
       Begin TextField RedirectField
@@ -376,7 +376,7 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   80
+         Top             =   90
          Transparent     =   False
          Underline       =   False
          ValidationMask  =   ""
@@ -412,7 +412,7 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   48
+         Top             =   59
          Transparent     =   False
          Underline       =   False
          Visible         =   True
@@ -444,11 +444,11 @@ Begin Window MainWindow
          TabPanelIndex   =   2
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   293
+         Top             =   244
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   177
+         Width           =   206
       End
       Begin TextArea LinkField
          AllowAutoDeactivate=   True
@@ -468,7 +468,7 @@ Begin Window MainWindow
          HasBorder       =   True
          HasHorizontalScrollbar=   False
          HasVerticalScrollbar=   True
-         Height          =   134
+         Height          =   182
          HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
@@ -492,7 +492,7 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   327
+         Top             =   278
          Transparent     =   False
          Underline       =   False
          UnicodeMode     =   1
@@ -1683,7 +1683,7 @@ Begin Window MainWindow
          HasBorder       =   True
          HasHorizontalScrollbar=   False
          HasVerticalScrollbar=   True
-         Height          =   158
+         Height          =   108
          HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
@@ -1776,6 +1776,7 @@ Begin Window MainWindow
       TabPanelIndex   =   0
    End
    Begin Timer MoveOnTimer
+      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Period          =   2000
