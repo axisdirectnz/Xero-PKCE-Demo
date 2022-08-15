@@ -219,56 +219,6 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   100
       End
-      Begin TextArea ScopesField
-         AllowAutoDeactivate=   True
-         AllowFocusRing  =   True
-         AllowSpellChecking=   True
-         AllowStyledText =   True
-         AllowTabs       =   False
-         BackgroundColor =   &cFFFFFF00
-         Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
-         Enabled         =   True
-         FontName        =   "System"
-         FontSize        =   0.0
-         FontUnit        =   0
-         Format          =   ""
-         HasBorder       =   True
-         HasHorizontalScrollbar=   False
-         HasVerticalScrollbar=   True
-         Height          =   136
-         HideSelection   =   True
-         Index           =   -2147483648
-         InitialParent   =   "StagePanel"
-         Italic          =   False
-         Left            =   600
-         LineHeight      =   0.0
-         LineSpacing     =   1.0
-         LockBottom      =   False
-         LockedInPosition=   False
-         LockLeft        =   True
-         LockRight       =   False
-         LockTop         =   True
-         MaximumCharactersAllowed=   0
-         Multiline       =   True
-         ReadOnly        =   False
-         Scope           =   2
-         TabIndex        =   5
-         TabPanelIndex   =   2
-         TabStop         =   True
-         Text            =   "offline_access openid profile email accounting.transactions accounting.settings accounting.contacts"
-         TextAlignment   =   0
-         TextColor       =   &c00000000
-         Tooltip         =   ""
-         Top             =   146
-         Transparent     =   False
-         Underline       =   False
-         UnicodeMode     =   1
-         ValidationMask  =   ""
-         Visible         =   True
-         Width           =   206
-      End
       Begin Label Label3
          AllowAutoDeactivate=   True
          Bold            =   False
@@ -298,11 +248,11 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   114
+         Top             =   92
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   108
+         Width           =   71
       End
       Begin Label Label2
          AllowAutoDeactivate=   True
@@ -359,7 +309,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   600
+         Left            =   676
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -376,12 +326,12 @@ Begin Window MainWindow
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   90
+         Top             =   58
          Transparent     =   False
          Underline       =   False
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   206
+         Width           =   140
       End
       Begin Label Label1
          AllowAutoDeactivate=   True
@@ -416,7 +366,7 @@ Begin Window MainWindow
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   108
+         Width           =   71
       End
       Begin PushButton GenerateLinkButton
          AllowAutoDeactivate=   True
@@ -1715,6 +1665,88 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   353
       End
+      Begin Listbox ScopesList
+         AllowAutoDeactivate=   True
+         AllowAutoHideScrollbars=   True
+         AllowExpandableRows=   False
+         AllowFocusRing  =   True
+         AllowResizableColumns=   False
+         AllowRowDragging=   False
+         AllowRowReordering=   False
+         Bold            =   False
+         ColumnCount     =   1
+         ColumnWidths    =   ""
+         DataField       =   ""
+         DataSource      =   ""
+         DefaultRowHeight=   -1
+         DropIndicatorVisible=   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         GridLinesHorizontalStyle=   0
+         GridLinesVerticalStyle=   0
+         HasBorder       =   True
+         HasHeader       =   False
+         HasHorizontalScrollbar=   False
+         HasVerticalScrollbar=   True
+         HeadingIndex    =   -1
+         Height          =   156
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         InitialValue    =   ""
+         Italic          =   False
+         Left            =   600
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         RequiresSelection=   False
+         RowSelectionType=   0
+         Scope           =   0
+         TabIndex        =   15
+         TabPanelIndex   =   2
+         TabStop         =   True
+         Tooltip         =   ""
+         Top             =   126
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   216
+         _ScrollOffset   =   0
+         _ScrollWidth    =   -1
+      End
+      Begin XeroScopesPopupMenu ScopesMenu
+         AllowAutoDeactivate=   True
+         Bold            =   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Height          =   22
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         InitialValue    =   ""
+         Italic          =   False
+         Left            =   676
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         Scope           =   0
+         SelectedRowIndex=   0
+         TabIndex        =   16
+         TabPanelIndex   =   2
+         TabStop         =   True
+         Tooltip         =   ""
+         Top             =   92
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   140
+      End
    End
    Begin Canvas AuthStages
       AllowAutoDeactivate=   True
@@ -1776,7 +1808,6 @@ Begin Window MainWindow
       TabPanelIndex   =   0
    End
    Begin Timer MoveOnTimer
-      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Period          =   2000
@@ -1792,6 +1823,19 @@ End
 		Sub Open()
 		  MoveOnTimer.Period = 5000
 		  MoveOnTimer.RunMode = Timer.RunModes.Single
+		  
+		  Dim Scopes() As String = kInitialScopes.Split(" ")
+		  
+		  For i As Integer = 0 To Scopes.LastIndex
+		    ScopesList.AddRow(Scopes(i))
+		    For j As Integer = ScopesMenu.LastRowIndex DownTo 0
+		      If ScopesMenu.RowValueAt(j) = Scopes(i) Then
+		        ScopesMenu.RemoveRowAt(j)
+		        Exit For
+		      End If
+		    Next j
+		  Next i
+		  
 		End Sub
 	#tag EndEvent
 
@@ -1945,6 +1989,10 @@ End
 	#tag EndProperty
 
 
+	#tag Constant, Name = kInitialScopes, Type = String, Dynamic = False, Default = \"offline_access openid profile email accounting.transactions accounting.settings accounting.contacts", Scope = Public
+	#tag EndConstant
+
+
 #tag EndWindowCode
 
 #tag Events StagePanel
@@ -1967,7 +2015,13 @@ End
 #tag Events GenerateLinkButton
 	#tag Event
 		Sub Action()
-		  Var URL As String = BuildAuthorizeUrl(ClientIDField.Text, StateField.Text, "https://login.xero.com/identity/connect/authorize", RedirectField.Text, ScopesField.Text)
+		  Dim Scopes() As String
+		  For i As Integer = 0 To ScopesList.LastRowIndex
+		    Scopes.Add(ScopesList.CellValueAt(i, 0))
+		  Next
+		  
+		  Var eScopes As String = String.FromArray(Scopes, " ")
+		  Var URL As String = BuildAuthorizeUrl(ClientIDField.Text, StateField.Text, "https://login.xero.com/identity/connect/authorize", RedirectField.Text, eScopes)
 		  
 		  LinkField.Text = URL
 		  AuthorizeButton.Enabled = True
@@ -2085,6 +2139,31 @@ End
 		  + "&code_verifier=" + CodeVerifierField.Text
 		  
 		  RetrieveTokensButton.Enabled = True
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ScopesList
+	#tag Event
+		Sub Change()
+		  If me.SelectedRowIndex < 0 Then
+		    Return
+		  End If
+		  ScopesMenu.AddRow(me.CellValueAt(me.SelectedRowIndex, 0))
+		  me.RemoveRowAt(me.SelectedRowIndex)
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events ScopesMenu
+	#tag Event
+		Sub SelectionChanged(item As DesktopMenuItem)
+		  If me.SelectedRowIndex < 0 Then
+		    Return
+		  End If
+		  
+		  ScopesList.AddRow(item.Text)
+		  me.RemoveRowAt(me.SelectedRowIndex)
+		  me.SelectedRowIndex = -1
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents

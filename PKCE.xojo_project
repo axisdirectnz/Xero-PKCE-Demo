@@ -1,6 +1,6 @@
 Type=Desktop
 RBProjectVersion=2022.03
-MinIDEVersion=20150400
+MinIDEVersion=20210300
 OrigIDEVersion=20220300
 Class=App;App.xojo_code;&h000000000DB637FF;&h0000000000000000;false
 MenuBar=MainMenuBar;MainMenuBar.xojo_menu;&h000000006A5C97FF;&h0000000000000000;false
@@ -18,6 +18,8 @@ MultiImage=Part4;Images/Part4.xojo_image;&h00000000089027FF;&h00000000450F3FFF;f
 MultiImage=Part3;Images/Part3.xojo_image;&h000000003B1347FF;&h00000000450F3FFF;false
 MultiImage=Part2;Images/Part2.xojo_image;&h000000006EC41FFF;&h00000000450F3FFF;false
 MultiImage=Part1;Images/Part1.xojo_image;&h0000000072CDBFFF;&h00000000450F3FFF;false
+Folder=Custom Controls;Custom Controls;&h000000007D576FFF;&h0000000000000000;false
+Class=XeroScopesPopupMenu;Custom Controls/XeroScopesPopupMenu.xojo_code;&h000000003F9EB7FF;&h000000007D576FFF;false
 MajorVersion=1
 MinorVersion=0
 SubVersion=0
