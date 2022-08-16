@@ -1,8 +1,9 @@
 #tag MultiImage
 Image Part4blurred
 	#tag ImageRepresentation
-		SaveInfo = APHRcwECAQAAAABZQzpcVXNlcnNcd2F5bmUuQVhJU0RJUkVDVFxPbmVEcml2ZSAtIEF4aXMgRGlyZWN0IExpbWl0ZWRcRG9jdW1lbnRzXFBLQ0VcUGFydDQtYmx1cnJlZC5wbmcDAAAAAAEABAAAAAABAAAAAAAAAA==
-		FullPath = C:\Users\wayne.AXISDIRECT\OneDrive - Axis Direct Limited\Documents\PKCE\Part4-blurred.png
+		SaveInfo = APHRcwECAQAAAAA5RzpcX0dpdFxQS0NFIERlbW9cWGVyby1QS0NFLURlbW9cSW1hZ2VzXFBhcnQ0LWJsdXJyZWQucG5nAwAAAAABAAQAAAAAAQAAAAAAAAA=
+		FullPath = G:\_Git\PKCE Demo\Xero-PKCE-Demo\Images\Part4-blurred.png
+		PartialPath = Images\Part4-blurred.png
 		#tag ImageSpecification
 			Comment = 
 			Device = 31
