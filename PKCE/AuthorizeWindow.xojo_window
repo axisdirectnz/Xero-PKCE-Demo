@@ -49,6 +49,15 @@ End
 #tag EndWindow
 
 #tag WindowCode
+	#tag Event
+		Sub Open()
+		  Var f As FolderItem = SpecialFolder.Desktop.Child("PKCE.log")
+		  LogFile = TextOutputStream.Create(f)
+		  
+		End Sub
+	#tag EndEvent
+
+
 	#tag Method, Flags = &h0
 		Function ShowModal(URL As String) As String
 		  // Calling the overridden superclass method.
@@ -58,6 +67,10 @@ End
 		End Function
 	#tag EndMethod
 
+
+	#tag Property, Flags = &h0
+		LogFile As TextOutputStream
+	#tag EndProperty
 
 	#tag Property, Flags = &h21
 		Private Result As String
@@ -69,6 +82,8 @@ End
 #tag Events Authorizer
 	#tag Event
 		Sub DocumentComplete(url as String)
+		  LogFile.Write("Document Complete URL = " + url + EndOfLine)
+		  
 		  If url.BeginsWith("http://localhost:8888/callback") Then
 		    Result = url
 		    self.Close
@@ -78,7 +93,7 @@ End
 	#tag EndEvent
 	#tag Event
 		Sub TitleChanged(newTitle as String)
-		  System.DebugLog(newTitle)
+		  LogFile.Write("Title Changed - " + newTitle + EndOfLine)
 		  
 		  #If TargetMacOS
 		    If newTitle.BeginsWith("localhost:8888/callback") Then
@@ -86,6 +101,12 @@ End
 		      Self.Close
 		    End If
 		  #endif
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Close()
+		  LogFile.Close
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
