@@ -83,6 +83,7 @@ End
 	#tag Event
 		Sub DocumentComplete(url as String)
 		  LogFile.Write("Document Complete URL = " + url + EndOfLine)
+		  LogFile.Flush
 		  
 		  If url.BeginsWith("http://localhost:8888/callback") Then
 		    Result = url
@@ -94,6 +95,7 @@ End
 	#tag Event
 		Sub TitleChanged(newTitle as String)
 		  LogFile.Write("Title Changed - " + newTitle + EndOfLine)
+		  LogFile.Flush
 		  
 		  #If TargetMacOS
 		    If newTitle.BeginsWith("localhost:8888/callback") Then
