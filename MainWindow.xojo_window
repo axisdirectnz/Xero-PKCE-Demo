@@ -52,7 +52,7 @@ Begin Window MainWindow
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   1
+      Value           =   4
       Visible         =   True
       Width           =   612
       Begin TextField RedirectField
@@ -896,7 +896,7 @@ Begin Window MainWindow
          AllowAutoDeactivate=   True
          Bold            =   False
          Cancel          =   False
-         Caption         =   "GET Connections"
+         Caption         =   "GET Tenants"
          Default         =   False
          Enabled         =   False
          FontName        =   "System"
