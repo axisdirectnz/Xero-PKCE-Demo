@@ -52,11 +52,7 @@ Begin Window MainWindow
       Top             =   20
       Transparent     =   False
       Underline       =   False
-<<<<<<< HEAD
-      Value           =   1
-=======
-      Value           =   4
->>>>>>> 5c295bab0c92f1d955dd877a251669aecf61963e
+      Value           =   3
       Visible         =   True
       Width           =   612
       Begin TextField RedirectField
