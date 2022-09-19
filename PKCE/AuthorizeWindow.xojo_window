@@ -79,15 +79,36 @@ End
 
 #tag Events Authorizer
 	#tag Event
+<<<<<<< Updated upstream
 		Function CancelLoad(URL as String) As Boolean
 		  // Need to have this here due to macOS not giving us this URL in DocumentComplete
 		  
+=======
+		Sub DocumentComplete(url as String)
+		  System.DebugLog("Doc Complete - URL = " + url)
+>>>>>>> Stashed changes
 		  If url.BeginsWith("http://localhost:8888/callback") Then
 		    Result = url
 		    Timer.CallLater(0, AddressOf CloseWindow) ' Closing the window from here will crash the app, so push the close into the next event loop
 		  End If
 		  
+<<<<<<< Updated upstream
 		End Function
+=======
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub TitleChanged(newTitle as String)
+		  System.DebugLog("Title Changed - Title = " + newTitle)
+		  
+		  #If TargetMacOS
+		    If newTitle.BeginsWith("localhost:8888/callback") Then
+		      Result = "http://" + newTitle
+		      Self.Close
+		    End If
+		  #endif
+		End Sub
+>>>>>>> Stashed changes
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
