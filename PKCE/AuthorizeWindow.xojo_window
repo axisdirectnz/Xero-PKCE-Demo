@@ -49,14 +49,12 @@ End
 #tag EndWindow
 
 #tag WindowCode
-	#tag Event
-		Sub Open()
-		  Var f As FolderItem = SpecialFolder.Desktop.Child("PKCE.log")
-		  LogFile = TextOutputStream.Create(f)
+	#tag Method, Flags = &h0
+		Sub CloseWindow()
+		  self.Close
 		  
 		End Sub
-	#tag EndEvent
-
+	#tag EndMethod
 
 	#tag Method, Flags = &h0
 		Function ShowModal(URL As String) As String
@@ -81,35 +79,15 @@ End
 
 #tag Events Authorizer
 	#tag Event
-		Sub DocumentComplete(url as String)
-		  LogFile.Write("Document Complete URL = " + url + EndOfLine)
-		  LogFile.Flush
+		Function CancelLoad(URL as String) As Boolean
+		  // Need to have this here due to macOS not giving us this URL in DocumentComplete
 		  
 		  If url.BeginsWith("http://localhost:8888/callback") Then
 		    Result = url
-		    self.Close
+		    Timer.CallLater(0, AddressOf CloseWindow) ' Closing the window from here will crash the app, so push the close into the next event loop
 		  End If
 		  
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub TitleChanged(newTitle as String)
-		  LogFile.Write("Title Changed - " + newTitle + EndOfLine)
-		  LogFile.Flush
-		  
-		  #If TargetMacOS
-		    If newTitle.BeginsWith("localhost:8888/callback") Then
-		      Result = "http://" + newTitle
-		      Self.Close
-		    End If
-		  #endif
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub Close()
-		  LogFile.Close
-		  
-		End Sub
+		End Function
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
