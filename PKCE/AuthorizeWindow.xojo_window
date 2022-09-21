@@ -88,6 +88,15 @@ End
 		  End If
 		End Function
 	#tag EndEvent
+	#tag Event
+		Sub DocumentComplete(url as String)
+		  If url.BeginsWith("http://localhost:8888/callback") Then
+		    Result = url
+		    Self.Close
+		  End If
+		  
+		End Sub
+	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
