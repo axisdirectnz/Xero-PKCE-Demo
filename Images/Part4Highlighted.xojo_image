@@ -1,9 +1,9 @@
 #tag MultiImage
-Image Part3blurred
+Image Part4Highlighted
 	#tag ImageRepresentation
-		SaveInfo = APHRcwECAQAAAAA5RzpcX0dpdFxQS0NFIERlbW9cWGVyby1QS0NFLURlbW9cSW1hZ2VzXFBhcnQzLWJsdXJyZWQucG5nAwAAAAABAAQAAAAAAQAAAAAAAAA=
-		FullPath = G:\_Git\PKCE Demo\Xero-PKCE-Demo\Images\Part3-blurred.png
-		PartialPath = Images\Part3-blurred.png
+		SaveInfo = APHRcwECAQAAAABKQzpcVXNlcnNcR0dQQ1xEb2N1bWVudHNcR2l0SHViXFhlcm8tUEtDRS1EZW1vXEltYWdlc1xQYXJ0NC1IaWdobGlnaHRlZC5wbmcDAAAAAAEABAAAAAABAAAAAAAAAA==
+		FullPath = C:\Users\GGPC\Documents\GitHub\Xero-PKCE-Demo\Images\Part4-Highlighted.png
+		PartialPath = Images\Part4-Highlighted.png
 		#tag ImageSpecification
 			Comment = 
 			Device = 31
@@ -11,7 +11,7 @@ Image Part3blurred
 			Orientation = Any
 			Platform = 15
 			PPI = 72
-			VSize = 123.00
+			VSize = 107.00
 		#tag EndImageSpecification
 	#tag EndImageRepresentation
 	#tag ImageRepresentation
@@ -22,7 +22,7 @@ Image Part3blurred
 			Orientation = Any
 			Platform = 15
 			PPI = 144
-			VSize = 123.00
+			VSize = 107.00
 		#tag EndImageSpecification
 	#tag EndImageRepresentation
 	#tag ImageRepresentation
@@ -33,7 +33,7 @@ Image Part3blurred
 			Orientation = Any
 			Platform = 15
 			PPI = 216
-			VSize = 123.00
+			VSize = 107.00
 		#tag EndImageSpecification
 	#tag EndImageRepresentation
 End Image

@@ -1,5 +1,5 @@
-#tag Window
-Begin Window MainWindow
+#tag DesktopWindow
+Begin DesktopWindow MainWindow
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
@@ -10,7 +10,7 @@ Begin Window MainWindow
    HasFullScreenButton=   False
    HasMaximizeButton=   True
    HasMinimizeButton=   True
-   Height          =   527
+   Height          =   600
    ImplicitInstance=   False
    MacProcID       =   0
    MaximumHeight   =   32000
@@ -23,28 +23,28 @@ Begin Window MainWindow
    Title           =   "Xojo Meet Xero"
    Type            =   0
    Visible         =   True
-   Width           =   1221
-   Begin TabPanel StagePanel
+   Width           =   1425
+   Begin DesktopTabPanel StagePanel
       AllowAutoDeactivate=   True
       Bold            =   False
       Enabled         =   True
       FontName        =   "System"
       FontSize        =   0.0
       FontUnit        =   0
-      Height          =   487
+      Height          =   560
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
       Left            =   589
-      LockBottom      =   False
+      LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   True
-      LockRight       =   False
+      LockRight       =   True
       LockTop         =   True
       Panels          =   ""
       Scope           =   2
       SmallTabs       =   False
-      TabDefinition   =   "Introduction\rAuthorization Request\rExchange Temporary Code\rGet Tenant ID's\rAccess Protected Resources"
+      TabDefinition   =   "Introduction\rCreate Application\rAuthorization Request\rExchange Temporary Code\rGet Tenant ID's\rAccess Protected Resources"
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   True
@@ -52,18 +52,16 @@ Begin Window MainWindow
       Top             =   20
       Transparent     =   False
       Underline       =   False
-      Value           =   3
+      Value           =   1
       Visible         =   True
-      Width           =   612
-      Begin TextField RedirectField
+      Width           =   816
+      Begin DesktopTextField RedirectField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   False
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   False
          FontName        =   "System"
          FontSize        =   0.0
@@ -75,7 +73,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   920
+         Left            =   940
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -86,7 +84,7 @@ Begin Window MainWindow
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   1
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Text            =   "http://localhost:8888/callback"
          TextAlignment   =   0
@@ -97,13 +95,11 @@ Begin Window MainWindow
          Underline       =   False
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   261
+         Width           =   241
       End
-      Begin Label Label4
+      Begin DesktopLabel Label4
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -112,7 +108,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   828
+         Left            =   848
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -122,7 +118,7 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   2
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Text            =   "Redirect URI"
          TextAlignment   =   0
@@ -134,15 +130,13 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   80
       End
-      Begin TextField StateField
+      Begin DesktopTextField StateField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   False
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -154,7 +148,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   920
+         Left            =   940
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -165,7 +159,7 @@ Begin Window MainWindow
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   3
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Text            =   "123456789"
          TextAlignment   =   0
@@ -176,13 +170,11 @@ Begin Window MainWindow
          Underline       =   False
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   261
+         Width           =   241
       End
-      Begin Label Label10
+      Begin DesktopLabel Label10
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -191,7 +183,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   828
+         Left            =   848
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -201,7 +193,7 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   4
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Text            =   "State"
          TextAlignment   =   0
@@ -213,11 +205,9 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   80
       End
-      Begin Label Label3
+      Begin DesktopLabel Label3
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -236,7 +226,7 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   6
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Text            =   "Scopes"
          TextAlignment   =   0
@@ -248,15 +238,13 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   71
       End
-      Begin TextField ClientIDField
+      Begin DesktopTextField ClientIDField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   False
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -279,7 +267,7 @@ Begin Window MainWindow
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   9
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
@@ -290,13 +278,11 @@ Begin Window MainWindow
          Underline       =   False
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   140
+         Width           =   160
       End
-      Begin Label Label1
+      Begin DesktopLabel Label1
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -315,7 +301,7 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   10
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Text            =   "Client ID"
          TextAlignment   =   0
@@ -327,7 +313,7 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   71
       End
-      Begin PushButton GenerateLinkButton
+      Begin DesktopButton GenerateLinkButton
          AllowAutoDeactivate=   True
          Bold            =   False
          Cancel          =   False
@@ -341,7 +327,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   828
+         Left            =   600
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -350,7 +336,7 @@ Begin Window MainWindow
          MacButtonStyle  =   0
          Scope           =   2
          TabIndex        =   11
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Tooltip         =   ""
          Top             =   244
@@ -359,7 +345,7 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   206
       End
-      Begin TextArea LinkField
+      Begin DesktopTextArea LinkField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   True
@@ -367,8 +353,6 @@ Begin Window MainWindow
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -377,25 +361,25 @@ Begin Window MainWindow
          HasBorder       =   True
          HasHorizontalScrollbar=   False
          HasVerticalScrollbar=   True
-         Height          =   182
+         Height          =   255
          HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   828
+         Left            =   600
          LineHeight      =   0.0
          LineSpacing     =   1.0
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   12
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
@@ -407,9 +391,9 @@ Begin Window MainWindow
          UnicodeMode     =   1
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   353
+         Width           =   785
       End
-      Begin PushButton AuthorizeButton
+      Begin DesktopButton AuthorizeButton
          AllowAutoDeactivate=   True
          Bold            =   False
          Cancel          =   False
@@ -423,25 +407,25 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   1077
-         LockBottom      =   False
+         Left            =   1281
+         LockBottom      =   True
          LockedInPosition=   False
-         LockLeft        =   True
-         LockRight       =   False
-         LockTop         =   True
+         LockLeft        =   False
+         LockRight       =   True
+         LockTop         =   False
          MacButtonStyle  =   0
          Scope           =   2
          TabIndex        =   13
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   473
+         Top             =   546
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   104
       End
-      Begin TextArea TempCodeField
+      Begin DesktopTextArea TempCodeField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   False
@@ -449,8 +433,6 @@ Begin Window MainWindow
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -464,20 +446,20 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   933
+         Left            =   964
          LineHeight      =   0.0
          LineSpacing     =   1.0
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   0
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
@@ -489,13 +471,11 @@ Begin Window MainWindow
          UnicodeMode     =   0
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   248
+         Width           =   421
       End
-      Begin Label Label6
+      Begin DesktopLabel Label6
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -514,9 +494,9 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   1
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
-         Text            =   "Returned Code"
+         Text            =   "Temporary Code"
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
@@ -524,13 +504,11 @@ Begin Window MainWindow
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   94
+         Width           =   126
       End
-      Begin Label Label5
+      Begin DesktopLabel Label5
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -549,7 +527,7 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   2
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   "Returned State"
          TextAlignment   =   0
@@ -561,15 +539,13 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   90
       End
-      Begin TextField ReturnedStateField
+      Begin DesktopTextField ReturnedStateField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   False
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -592,7 +568,7 @@ Begin Window MainWindow
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   3
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
@@ -605,7 +581,7 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   104
       End
-      Begin PushButton RetrieveTokensButton
+      Begin DesktopButton RetrieveTokensButton
          AllowAutoDeactivate=   True
          Bold            =   False
          Cancel          =   False
@@ -619,7 +595,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   609
+         Left            =   610
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -628,20 +604,18 @@ Begin Window MainWindow
          MacButtonStyle  =   0
          Scope           =   2
          TabIndex        =   4
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   221
+         Top             =   236
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   188
       End
-      Begin Label Label8
+      Begin DesktopLabel Label8
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -660,19 +634,19 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   6
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   "Access Token"
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   255
+         Top             =   270
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   100
       End
-      Begin TextArea IDTokenField
+      Begin DesktopTextArea IDTokenField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   True
@@ -680,8 +654,6 @@ Begin Window MainWindow
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -690,7 +662,7 @@ Begin Window MainWindow
          HasBorder       =   True
          HasHorizontalScrollbar=   False
          HasVerticalScrollbar=   True
-         Height          =   62
+         Height          =   89
          HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
@@ -708,13 +680,13 @@ Begin Window MainWindow
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   7
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   288
+         Top             =   302
          Transparent     =   False
          Underline       =   False
          UnicodeMode     =   1
@@ -722,11 +694,9 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   273
       End
-      Begin Label Label7
+      Begin DesktopLabel Label7
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -735,7 +705,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   609
+         Left            =   610
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -745,23 +715,21 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   8
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   "Open ID Token"
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   255
+         Top             =   270
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   206
       End
-      Begin Label Label9
+      Begin DesktopLabel Label9
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -770,7 +738,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   609
+         Left            =   602
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -780,19 +748,19 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   9
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   "Refresh Token"
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   362
+         Top             =   435
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   205
       End
-      Begin TextArea AccessTokenField
+      Begin DesktopTextArea AccessTokenField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   True
@@ -800,8 +768,6 @@ Begin Window MainWindow
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -810,7 +776,7 @@ Begin Window MainWindow
          HasBorder       =   True
          HasHorizontalScrollbar=   False
          HasVerticalScrollbar=   True
-         Height          =   62
+         Height          =   89
          HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
@@ -821,28 +787,28 @@ Begin Window MainWindow
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   10
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   288
+         Top             =   302
          Transparent     =   False
          Underline       =   False
          UnicodeMode     =   1
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   288
+         Width           =   492
       End
-      Begin TextArea RefreshTokenField
+      Begin DesktopTextArea RefreshTokenField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   True
@@ -850,8 +816,6 @@ Begin Window MainWindow
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -878,13 +842,13 @@ Begin Window MainWindow
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   11
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   394
+         Top             =   467
          Transparent     =   False
          Underline       =   False
          UnicodeMode     =   1
@@ -892,7 +856,7 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   206
       End
-      Begin PushButton TenantsButton
+      Begin DesktopButton TenantsButton
          AllowAutoDeactivate=   True
          Bold            =   False
          Cancel          =   False
@@ -915,7 +879,7 @@ Begin Window MainWindow
          MacButtonStyle  =   0
          Scope           =   2
          TabIndex        =   0
-         TabPanelIndex   =   4
+         TabPanelIndex   =   5
          TabStop         =   True
          Tooltip         =   ""
          Top             =   58
@@ -924,7 +888,7 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   121
       End
-      Begin Listbox TenantsList
+      Begin DesktopListBox TenantsList
          AllowAutoDeactivate=   True
          AllowAutoHideScrollbars=   True
          AllowExpandableRows=   False
@@ -935,52 +899,47 @@ Begin Window MainWindow
          Bold            =   False
          ColumnCount     =   2
          ColumnWidths    =   ""
-         DataField       =   ""
-         DataSource      =   ""
          DefaultRowHeight=   -1
          DropIndicatorVisible=   False
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
          FontUnit        =   0
-         GridLinesHorizontalStyle=   0
-         GridLinesVerticalStyle=   0
+         GridLineStyle   =   0
          HasBorder       =   True
          HasHeader       =   True
          HasHorizontalScrollbar=   False
          HasVerticalScrollbar=   True
          HeadingIndex    =   -1
-         Height          =   395
+         Height          =   392
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          InitialValue    =   "Xero ID	Organisation"
          Italic          =   False
          Left            =   609
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          RequiresSelection=   False
          RowSelectionType=   0
          Scope           =   2
          TabIndex        =   1
-         TabPanelIndex   =   4
+         TabPanelIndex   =   5
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   92
+         Top             =   168
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   572
+         Width           =   776
          _ScrollOffset   =   0
          _ScrollWidth    =   -1
       End
-      Begin PopupMenu CommandMenu
+      Begin DesktopPopupMenu CommandMenu
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   False
          FontName        =   "System"
          FontSize        =   0.0
@@ -999,20 +958,18 @@ Begin Window MainWindow
          Scope           =   2
          SelectedRowIndex=   0
          TabIndex        =   0
-         TabPanelIndex   =   5
+         TabPanelIndex   =   6
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   124
+         Top             =   92
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   51
       End
-      Begin PopupMenu EndpointMenu
+      Begin DesktopPopupMenu EndpointMenu
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   False
          FontName        =   "System"
          FontSize        =   0.0
@@ -1020,7 +977,7 @@ Begin Window MainWindow
          Height          =   22
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
-         InitialValue    =   "invoices\r\ncontacts\r\norganisation"
+         InitialValue    =   "organisation\r\ncontacts\r\ninvoices\r\ncontact\r\ninvoice"
          Italic          =   False
          Left            =   672
          LockBottom      =   False
@@ -1031,22 +988,22 @@ Begin Window MainWindow
          Scope           =   2
          SelectedRowIndex=   0
          TabIndex        =   1
-         TabPanelIndex   =   5
+         TabPanelIndex   =   6
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   124
+         Top             =   92
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   109
       End
-      Begin PushButton CallButton
+      Begin DesktopButton EndpointButton
          AllowAutoDeactivate=   True
          Bold            =   False
          Cancel          =   False
-         Caption         =   "Call the API"
+         Caption         =   "Set Endpoint"
          Default         =   False
-         Enabled         =   False
+         Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
          FontUnit        =   0
@@ -1063,20 +1020,18 @@ Begin Window MainWindow
          MacButtonStyle  =   0
          Scope           =   2
          TabIndex        =   2
-         TabPanelIndex   =   5
+         TabPanelIndex   =   6
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   124
+         Top             =   92
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   96
       End
-      Begin PopupMenu TenantsMenu
+      Begin DesktopPopupMenu TenantsMenu
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   False
          FontName        =   "System"
          FontSize        =   0.0
@@ -1086,7 +1041,7 @@ Begin Window MainWindow
          InitialParent   =   "StagePanel"
          InitialValue    =   ""
          Italic          =   False
-         Left            =   609
+         Left            =   721
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -1095,25 +1050,23 @@ Begin Window MainWindow
          Scope           =   2
          SelectedRowIndex=   0
          TabIndex        =   1
-         TabPanelIndex   =   5
+         TabPanelIndex   =   6
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   90
+         Top             =   58
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   572
+         Width           =   333
       End
-      Begin TextArea ResultsField
+      Begin DesktopTextArea ResultsField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
-         AllowSpellChecking=   True
+         AllowSpellChecking=   False
          AllowStyledText =   True
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -1122,7 +1075,7 @@ Begin Window MainWindow
          HasBorder       =   True
          HasHorizontalScrollbar=   False
          HasVerticalScrollbar=   True
-         Height          =   297
+         Height          =   325
          HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
@@ -1130,35 +1083,33 @@ Begin Window MainWindow
          Left            =   609
          LineHeight      =   0.0
          LineSpacing     =   1.0
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   3
-         TabPanelIndex   =   5
+         TabPanelIndex   =   6
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   190
+         Top             =   235
          Transparent     =   False
          Underline       =   False
          UnicodeMode     =   1
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   572
+         Width           =   776
       End
-      Begin Label Label11
+      Begin DesktopLabel Label11
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -1177,7 +1128,7 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   4
-         TabPanelIndex   =   5
+         TabPanelIndex   =   6
          TabStop         =   True
          Text            =   "Select Tenant"
          TextAlignment   =   0
@@ -1189,11 +1140,9 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   100
       End
-      Begin Label Label12
+      Begin DesktopLabel Label12
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -1212,23 +1161,21 @@ Begin Window MainWindow
          Scope           =   2
          Selectable      =   False
          TabIndex        =   5
-         TabPanelIndex   =   5
+         TabPanelIndex   =   6
          TabStop         =   True
          Text            =   "Response"
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   158
+         Top             =   201
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   100
       End
-      Begin Label Label13
+      Begin DesktopLabel Label13
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -1247,23 +1194,21 @@ Begin Window MainWindow
          Scope           =   0
          Selectable      =   False
          TabIndex        =   12
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   "Issued By"
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   362
+         Top             =   403
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   80
       End
-      Begin Label IssuedByLabel
+      Begin DesktopLabel IssuedByLabel
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -1282,23 +1227,21 @@ Begin Window MainWindow
          Scope           =   0
          Selectable      =   False
          TabIndex        =   13
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   362
+         Top             =   403
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   204
       End
-      Begin Label Label14
+      Begin DesktopLabel Label14
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -1317,23 +1260,21 @@ Begin Window MainWindow
          Scope           =   0
          Selectable      =   False
          TabIndex        =   14
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   "Valid From"
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   394
+         Top             =   435
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   80
       End
-      Begin Label ValidBetweenLabel
+      Begin DesktopLabel ValidBetweenLabel
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -1352,19 +1293,19 @@ Begin Window MainWindow
          Scope           =   0
          Selectable      =   False
          TabIndex        =   15
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   394
+         Top             =   435
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   205
       End
-      Begin PushButton RefreshButton
+      Begin DesktopButton RefreshButton
          AllowAutoDeactivate=   True
          Bold            =   False
          Cancel          =   False
@@ -1387,33 +1328,31 @@ Begin Window MainWindow
          MacButtonStyle  =   0
          Scope           =   0
          TabIndex        =   16
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   465
+         Top             =   538
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   149
       End
-      Begin Label Label15
+      Begin DesktopLabel Label15
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
-         FontName        =   "System"
-         FontSize        =   0.0
+         FontName        =   "Arial"
+         FontSize        =   22.0
          FontUnit        =   0
-         Height          =   371
+         Height          =   444
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
          Left            =   609
-         LockBottom      =   False
+         LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          Multiline       =   True
          Scope           =   0
@@ -1429,13 +1368,11 @@ Begin Window MainWindow
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   572
+         Width           =   776
       End
-      Begin Label Label16
+      Begin DesktopLabel Label16
          AllowAutoDeactivate=   True
          Bold            =   True
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   32.0
@@ -1447,7 +1384,7 @@ Begin Window MainWindow
          Left            =   609
          LockBottom      =   False
          LockedInPosition=   False
-         LockLeft        =   False
+         LockLeft        =   True
          LockRight       =   True
          LockTop         =   True
          Multiline       =   False
@@ -1456,7 +1393,7 @@ Begin Window MainWindow
          TabIndex        =   1
          TabPanelIndex   =   1
          TabStop         =   True
-         Text            =   "Proof Key Code Exchange"
+         Text            =   "Proof Key for Code Exchange"
          TextAlignment   =   2
          TextColor       =   &c00000000
          Tooltip         =   ""
@@ -1464,9 +1401,9 @@ Begin Window MainWindow
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   572
+         Width           =   776
       End
-      Begin PushButton GenerateExchangeURLButton
+      Begin DesktopButton GenerateExchangeURLButton
          AllowAutoDeactivate=   True
          Bold            =   False
          Cancel          =   False
@@ -1489,7 +1426,7 @@ Begin Window MainWindow
          MacButtonStyle  =   0
          Scope           =   2
          TabIndex        =   17
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Tooltip         =   ""
          Top             =   91
@@ -1498,7 +1435,7 @@ Begin Window MainWindow
          Visible         =   True
          Width           =   189
       End
-      Begin TextArea ExchangeBodyField
+      Begin DesktopTextArea ExchangeBodyField
          AllowAutoDeactivate=   True
          AllowFocusRing  =   True
          AllowSpellChecking=   True
@@ -1506,8 +1443,6 @@ Begin Window MainWindow
          AllowTabs       =   False
          BackgroundColor =   &cFFFFFF00
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -1516,39 +1451,39 @@ Begin Window MainWindow
          HasBorder       =   True
          HasHorizontalScrollbar=   False
          HasVerticalScrollbar=   True
-         Height          =   83
+         Height          =   100
          HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   609
+         Left            =   827
          LineHeight      =   0.0
          LineSpacing     =   1.0
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   False
+         LockRight       =   True
          LockTop         =   True
          MaximumCharactersAllowed=   0
          Multiline       =   True
          ReadOnly        =   False
          Scope           =   2
          TabIndex        =   18
-         TabPanelIndex   =   3
+         TabPanelIndex   =   4
          TabStop         =   True
          Text            =   ""
          TextAlignment   =   0
          TextColor       =   &c00000000
          Tooltip         =   ""
-         Top             =   125
+         Top             =   124
          Transparent     =   False
          Underline       =   False
          UnicodeMode     =   1
          ValidationMask  =   ""
          Visible         =   True
-         Width           =   572
+         Width           =   558
       End
-      Begin Listbox ScopesList
+      Begin DesktopListBox ScopesList
          AllowAutoDeactivate=   True
          AllowAutoHideScrollbars=   True
          AllowExpandableRows=   False
@@ -1559,16 +1494,13 @@ Begin Window MainWindow
          Bold            =   False
          ColumnCount     =   1
          ColumnWidths    =   ""
-         DataField       =   ""
-         DataSource      =   ""
          DefaultRowHeight=   -1
          DropIndicatorVisible=   False
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
          FontUnit        =   0
-         GridLinesHorizontalStyle=   0
-         GridLinesVerticalStyle=   0
+         GridLineStyle   =   0
          HasBorder       =   True
          HasHeader       =   False
          HasHorizontalScrollbar=   False
@@ -1589,14 +1521,14 @@ Begin Window MainWindow
          RowSelectionType=   0
          Scope           =   0
          TabIndex        =   15
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Tooltip         =   ""
          Top             =   126
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   216
+         Width           =   236
          _ScrollOffset   =   0
          _ScrollWidth    =   -1
       End
@@ -1621,16 +1553,16 @@ Begin Window MainWindow
          Scope           =   0
          SelectedRowIndex=   0
          TabIndex        =   16
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Tooltip         =   ""
          Top             =   92
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   140
+         Width           =   160
       End
-      Begin PushButton GenerateCodeVerifierButton
+      Begin DesktopButton GenerateCodeVerifierButton
          AllowAutoDeactivate=   True
          Bold            =   False
          Cancel          =   False
@@ -1644,7 +1576,7 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   600
+         Left            =   848
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -1653,20 +1585,67 @@ Begin Window MainWindow
          MacButtonStyle  =   0
          Scope           =   0
          TabIndex        =   17
-         TabPanelIndex   =   2
+         TabPanelIndex   =   3
          TabStop         =   True
          Tooltip         =   ""
-         Top             =   244
+         Top             =   125
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   216
+         Width           =   236
       End
-      Begin Label Label2
+      Begin DesktopListBox APIRequestHeaders
+         AllowAutoDeactivate=   True
+         AllowAutoHideScrollbars=   True
+         AllowExpandableRows=   False
+         AllowFocusRing  =   True
+         AllowResizableColumns=   False
+         AllowRowDragging=   False
+         AllowRowReordering=   False
+         Bold            =   False
+         ColumnCount     =   2
+         ColumnWidths    =   "40%,*"
+         DefaultRowHeight=   -1
+         DropIndicatorVisible=   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         GridLineStyle   =   0
+         HasBorder       =   True
+         HasHeader       =   True
+         HasHorizontalScrollbar=   False
+         HasVerticalScrollbar=   True
+         HeadingIndex    =   -1
+         Height          =   65
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         InitialValue    =   "Header Name	Value"
+         Italic          =   False
+         Left            =   901
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         RequiresSelection=   False
+         RowSelectionType=   0
+         Scope           =   0
+         TabIndex        =   6
+         TabPanelIndex   =   6
+         TabStop         =   True
+         Tooltip         =   ""
+         Top             =   92
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   484
+         _ScrollOffset   =   0
+         _ScrollWidth    =   -1
+      End
+      Begin DesktopLabel Label18
          AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
          FontName        =   "System"
          FontSize        =   0.0
@@ -1675,7 +1654,337 @@ Begin Window MainWindow
          Index           =   -2147483648
          InitialParent   =   "StagePanel"
          Italic          =   False
-         Left            =   600
+         Left            =   609
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         Multiline       =   False
+         Scope           =   0
+         Selectable      =   False
+         TabIndex        =   19
+         TabPanelIndex   =   4
+         TabStop         =   True
+         Text            =   "Request Body (form encoded)"
+         TextAlignment   =   0
+         TextColor       =   &c000000
+         Tooltip         =   ""
+         Top             =   124
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   206
+      End
+      Begin DesktopListBox TenantRequestHeaders
+         AllowAutoDeactivate=   True
+         AllowAutoHideScrollbars=   True
+         AllowExpandableRows=   False
+         AllowFocusRing  =   True
+         AllowResizableColumns=   False
+         AllowRowDragging=   False
+         AllowRowReordering=   False
+         Bold            =   False
+         ColumnCount     =   2
+         ColumnWidths    =   "40%,*"
+         DefaultRowHeight=   -1
+         DropIndicatorVisible=   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         GridLineStyle   =   0
+         HasBorder       =   True
+         HasHeader       =   True
+         HasHorizontalScrollbar=   False
+         HasVerticalScrollbar=   True
+         HeadingIndex    =   -1
+         Height          =   66
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         InitialValue    =   "Header Name	Value"
+         Italic          =   False
+         Left            =   742
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         RequiresSelection=   False
+         RowSelectionType=   0
+         Scope           =   0
+         TabIndex        =   2
+         TabPanelIndex   =   5
+         TabStop         =   True
+         Tooltip         =   ""
+         Top             =   58
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   456
+         _ScrollOffset   =   0
+         _ScrollWidth    =   -1
+      End
+      Begin DesktopLabel Label19
+         AllowAutoDeactivate=   True
+         Bold            =   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Height          =   20
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         Italic          =   False
+         Left            =   609
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         Multiline       =   False
+         Scope           =   0
+         Selectable      =   False
+         TabIndex        =   3
+         TabPanelIndex   =   5
+         TabStop         =   True
+         Text            =   "URL"
+         TextAlignment   =   0
+         TextColor       =   &c000000
+         Tooltip         =   ""
+         Top             =   136
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   100
+      End
+      Begin DesktopLabel Label20
+         AllowAutoDeactivate=   True
+         Bold            =   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Height          =   20
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         Italic          =   False
+         Left            =   742
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         Multiline       =   False
+         Scope           =   0
+         Selectable      =   False
+         TabIndex        =   4
+         TabPanelIndex   =   5
+         TabStop         =   True
+         Text            =   "https://api.xero.com/connections"
+         TextAlignment   =   0
+         TextColor       =   &c000000
+         Tooltip         =   ""
+         Top             =   136
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   456
+      End
+      Begin DesktopLabel Label21
+         AllowAutoDeactivate=   True
+         Bold            =   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Height          =   20
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         Italic          =   False
+         Left            =   609
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         Multiline       =   False
+         Scope           =   0
+         Selectable      =   False
+         TabIndex        =   9
+         TabPanelIndex   =   6
+         TabStop         =   True
+         Text            =   "URL"
+         TextAlignment   =   0
+         TextColor       =   &c000000
+         Tooltip         =   ""
+         Top             =   169
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   51
+      End
+      Begin DesktopLabel Label22
+         AllowAutoDeactivate=   True
+         Bold            =   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Height          =   20
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         Italic          =   False
+         Left            =   609
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         Multiline       =   False
+         Scope           =   0
+         Selectable      =   False
+         TabIndex        =   10
+         TabPanelIndex   =   6
+         TabStop         =   True
+         Text            =   "ID"
+         TextAlignment   =   0
+         TextColor       =   &c000000
+         Tooltip         =   ""
+         Top             =   126
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   51
+      End
+      Begin DesktopTextField idField
+         AllowAutoDeactivate=   True
+         AllowFocusRing  =   True
+         AllowSpellChecking=   False
+         AllowTabs       =   False
+         BackgroundColor =   &cFFFFFF
+         Bold            =   False
+         Enabled         =   False
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Format          =   ""
+         HasBorder       =   True
+         Height          =   22
+         Hint            =   ""
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         Italic          =   False
+         Left            =   672
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   False
+         LockTop         =   True
+         MaximumCharactersAllowed=   0
+         Password        =   False
+         ReadOnly        =   False
+         Scope           =   0
+         TabIndex        =   11
+         TabPanelIndex   =   6
+         TabStop         =   True
+         Text            =   ""
+         TextAlignment   =   0
+         TextColor       =   &c000000
+         Tooltip         =   ""
+         Top             =   124
+         Transparent     =   False
+         Underline       =   False
+         ValidationMask  =   ""
+         Visible         =   True
+         Width           =   217
+      End
+      Begin DesktopTextField URLField
+         AllowAutoDeactivate=   True
+         AllowFocusRing  =   True
+         AllowSpellChecking=   False
+         AllowTabs       =   False
+         BackgroundColor =   &cFFFFFF
+         Bold            =   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Format          =   ""
+         HasBorder       =   True
+         Height          =   22
+         Hint            =   ""
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         Italic          =   False
+         Left            =   672
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         MaximumCharactersAllowed=   0
+         Password        =   False
+         ReadOnly        =   False
+         Scope           =   0
+         TabIndex        =   12
+         TabPanelIndex   =   6
+         TabStop         =   True
+         Text            =   ""
+         TextAlignment   =   0
+         TextColor       =   &c000000
+         Tooltip         =   ""
+         Top             =   169
+         Transparent     =   False
+         Underline       =   False
+         ValidationMask  =   ""
+         Visible         =   True
+         Width           =   601
+      End
+      Begin DesktopButton CallButton
+         AllowAutoDeactivate=   True
+         Bold            =   False
+         Cancel          =   False
+         Caption         =   "Call the API"
+         Default         =   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
+         Height          =   22
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         Italic          =   False
+         Left            =   1285
+         LockBottom      =   False
+         LockedInPosition=   False
+         LockLeft        =   False
+         LockRight       =   True
+         LockTop         =   True
+         MacButtonStyle  =   0
+         Scope           =   0
+         TabIndex        =   13
+         TabPanelIndex   =   6
+         TabStop         =   True
+         Tooltip         =   ""
+         Top             =   169
+         Transparent     =   False
+         Underline       =   False
+         Visible         =   True
+         Width           =   100
+      End
+      Begin DesktopLabel Label23
+         AllowAutoDeactivate=   True
+         Bold            =   False
+         Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   22.0
+         FontUnit        =   0
+         Height          =   38
+         Index           =   -2147483648
+         InitialParent   =   "StagePanel"
+         Italic          =   False
+         Left            =   609
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
@@ -1684,77 +1993,26 @@ Begin Window MainWindow
          Multiline       =   False
          Scope           =   2
          Selectable      =   False
-         TabIndex        =   18
+         TabIndex        =   0
          TabPanelIndex   =   2
          TabStop         =   True
-         Text            =   "Code Verifier"
-         TextAlignment   =   0
-         TextColor       =   &c00000000
+         Text            =   "https://developer.xero.com"
+         TextAlignment   =   1
+         TextColor       =   &c0000FF00
          Tooltip         =   ""
-         Top             =   279
+         Top             =   58
          Transparent     =   False
-         Underline       =   False
+         Underline       =   True
          Visible         =   True
-         Width           =   108
-      End
-      Begin Textarea CodeVerifierField
-         AllowAutoDeactivate=   True
-         AllowFocusRing  =   True
-         AllowSpellChecking=   False
-         AllowStyledText =   True
-         AllowTabs       =   False
-         BackgroundColor =   &cFFFFFF00
-         Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
-         Enabled         =   True
-         FontName        =   "System"
-         FontSize        =   0.0
-         FontUnit        =   0
-         Format          =   ""
-         HasBorder       =   True
-         HasHorizontalScrollbar=   False
-         HasVerticalScrollbar=   True
-         Height          =   149
-         HideSelection   =   True
-         Index           =   -2147483648
-         InitialParent   =   "StagePanel"
-         Italic          =   False
-         Left            =   609
-         LineHeight      =   0.0
-         LineSpacing     =   1.0
-         LockBottom      =   False
-         LockedInPosition=   False
-         LockLeft        =   True
-         LockRight       =   False
-         LockTop         =   True
-         MaximumCharactersAllowed=   0
-         Multiline       =   True
-         ReadOnly        =   False
-         Scope           =   2
-         TabIndex        =   19
-         TabPanelIndex   =   2
-         TabStop         =   True
-         Text            =   ""
-         TextAlignment   =   0
-         TextColor       =   &c00000000
-         Tooltip         =   ""
-         Top             =   311
-         Transparent     =   False
-         Underline       =   False
-         UnicodeMode     =   0
-         ValidationMask  =   ""
-         Visible         =   True
-         Width           =   207
+         Width           =   338
       End
    End
-   Begin Canvas AuthStages
+   Begin DesktopCanvas AuthStages
       AllowAutoDeactivate=   True
       AllowFocus      =   False
       AllowFocusRing  =   True
       AllowTabs       =   False
       Backdrop        =   0
-      DoubleBuffer    =   False
       Enabled         =   True
       Height          =   487
       Index           =   -2147483648
@@ -1808,7 +2066,6 @@ Begin Window MainWindow
       TabPanelIndex   =   0
    End
    Begin Timer MoveOnTimer
-      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Period          =   2000
@@ -1817,13 +2074,13 @@ Begin Window MainWindow
       TabPanelIndex   =   0
    End
 End
-#tag EndWindow
+#tag EndDesktopWindow
 
 #tag WindowCode
 	#tag Event
-		Sub Open()
-		  MoveOnTimer.Period = 5000
-		  MoveOnTimer.RunMode = Timer.RunModes.Single
+		Sub Opening()
+		  REM MoveOnTimer.Period = 5000
+		  REM MoveOnTimer.RunMode = Timer.RunModes.Single
 		  
 		  Dim Scopes() As String = kInitialScopes.Split(" ")
 		  
@@ -1850,7 +2107,7 @@ End
 		  + "&redirect_uri=" + Redirect_URI _
 		  + "&scope=" + EncodeURLComponent(Scope) _
 		  + "&state=" + State _
-		  + "&code_challenge=" + Challenge(CodeVerifierField.Text) _
+		  + "&code_challenge=" + Challenge(CodeVerifier) _
 		  + "&code_challenge_method=S256"
 		  
 		  Return Result
@@ -1859,39 +2116,25 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Function Challenge(Verifier As String) As String
-		  Var s As String = Verifier
+		Private Sub CallTheApi()
+		  // Call the API
 		  
-		  s = Crypto.Hash(Verifier, Crypto.HashAlgorithms.SHA256)
-		  s = EncodeBase64URL(s)
+		  Var Command As String = CommandMenu.SelectedRowValue
+		  Var TenantID As String = TenantsMenu.RowTagAt(TenantsMenu.SelectedRowIndex)
 		  
-		  Return s
+		  Connection.ClearRequestHeaders
+		  Connection.RequestHeader("Authorization") = "Bearer " + AccessTokenField.Text
+		  Connection.RequestHeader("Accept") = "application/json"
+		  Connection.RequestHeader("Xero-tenant-id") = TenantID
+		  Connection.Send(Command, URLField.Text)
 		  
-		End Function
-	#tag EndMethod
-
-	#tag Method, Flags = &h21
-		Private Function EncodeBase64URL(Value As String) As String
-		  if value = "" then
-		    return ""
-		  end if
+		  APIRequestHeaders.RemoveAllRows
+		  APIRequestHeaders.AddRow("Authorization", "Bearer " + AccessTokenField.Text)
+		  APIRequestHeaders.AddRow("Accept", "application/json")
+		  APIRequestHeaders.AddRow("Xero-tenant-id", TenantID)
 		  
-		  If value.Encoding = Nil Then
-		    value = value.DefineEncoding(Encodings.WindowsANSI)
-		  End If
 		  
-		  dim result as string = EncodeBase64( value, 0 )
-		  
-		  result = result.ReplaceAllB( "+", "-" )
-		  result = result.ReplaceAllB( "/", "_" )
-		  if result.RightB( 2 ) = "==" then
-		    result = result.LeftB( result.LenB - 2 )
-		  elseif result.RightB( 1 ) = "=" then
-		    result = result.LeftB( result.LenB - 1 )
-		  end if
-		  
-		  return result.DefineEncoding( Encodings.UTF8 )
-		End Function
+		End Sub
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
@@ -1911,34 +2154,6 @@ End
 		  End If
 		  
 		End Sub
-	#tag EndMethod
-
-	#tag Method, Flags = &h21
-		Private Function GenerateVerifier() As String
-		  static alphabetCodes() as integer
-		  if alphabetCodes.Count = 0 then
-		    var alphabet() as string = split( "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~", "" )
-		    
-		    for each letter as string in alphabet
-		      alphabetCodes.Add letter.Asc
-		    next
-		  end if
-		  
-		  var codeLength as integer = Crypto.GenerateRandomBytes( 1 ).Byte( 0 )
-		  codeLength = codeLength mod ( 128 - 42 ) + 43
-		  
-		  var codeMB as new MemoryBlock( codeLength )
-		  var indexMB as MemoryBlock = Crypto.GenerateRandomBytes( codeLength )
-		  var lastByteIndex as integer = indexMB.Size - 1
-		  for byteIndex as integer = 0 to lastByteIndex
-		    var arrIndex as integer = indexMB.Byte( byteIndex ) mod alphabetCodes.Count
-		    codeMB.Byte( byteIndex ) = alphabetCodes( arrIndex )
-		  next
-		  
-		  var codeVerifier as string = codeMB
-		  Return codeVerifier.DefineEncoding(Encodings.UTF8)
-		  
-		End Function
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
@@ -1970,7 +2185,7 @@ End
 		    TenantsMenu.RemoveAllRows
 		    For i As Integer = 0 To v.LastIndex
 		      Var tenant As Dictionary = v(i)
-		      TenantsMenu.AddRow(tenant.Value("tenantName"))
+		      TenantsMenu.AddRow(tenant.Value("tenantName").StringValue)
 		      TenantsMenu.RowTagAt(TenantsMenu.LastAddedRowIndex) = tenant.Value("tenantId")
 		    Next
 		    CommandMenu.Enabled = True
@@ -1986,6 +2201,10 @@ End
 
 
 	#tag Property, Flags = &h0
+		CodeVerifier As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		JWT As JSONWebToken_MTC
 	#tag EndProperty
 
@@ -1998,27 +2217,18 @@ End
 
 #tag Events StagePanel
 	#tag Event
-		Sub Change()
-		  MoveOnTimer.RunMode = Timer.RunModes.Off
-		  AuthStages.Invalidate
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events ClientIDField
-	#tag Event
-		Sub Open()
-		  If DebugBuild Then
-		    me.Text = "4BFDEFDC544140E39D1A21C53220E049"
-		  End If
+		Sub PanelChanged()
+		  AuthStages.Refresh
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events GenerateLinkButton
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  Dim Scopes() As String
 		  For i As Integer = 0 To ScopesList.LastRowIndex
-		    Scopes.Add(ScopesList.CellValueAt(i, 0))
+		    Scopes.Add(ScopesList.CellTextAt(i, 0))
 		  Next
 		  
 		  Var eScopes As String = String.FromArray(Scopes, " ")
@@ -2032,7 +2242,7 @@ End
 #tag EndEvents
 #tag Events AuthorizeButton
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  Var w As New AuthorizeWindow
 		  w.Top = self.Top + 20
 		  w.Left = self.Left + 20
@@ -2043,12 +2253,7 @@ End
 		    Return
 		  End If
 		  
-		  If Result = "Xero | Error 500" Then
-		    MessageBox("Xero returned a status of 500 which indicates either the server is unavailable or there's an issue with the clientid.")
-		    Return
-		  End If
-		  
-		  If Not Result.BeginsWith("http://localhost:8888/callback?") Then
+		  If Not Result.BeginsWith("http://localhost:8888/callback") Then
 		    MessageBox("Xero returned an error " + Result)
 		    Return
 		  End If
@@ -2063,53 +2268,69 @@ End
 		  ReturnedStateField.Text = URLParameters.Value("state")
 		  TempCodeField.Text = URLParameters.Value("code")
 		  GenerateExchangeURLButton.Enabled = True
-		  StagePanel.SelectedPanelIndex = 2
 		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events RetrieveTokensButton
 	#tag Event
-		Sub Action()
-		  ExchangeConnection.SetRequestContent(ExchangeBodyField.Text, "application/x-www-form-urlencoded")
+		Sub Pressed()
+		  Var Body As String = "grant_type=authorization_code" _
+		  + "&client_id=" + ClientIDField.Text _
+		  + "&code=" + TempCodeField.Text _
+		  + "&redirect_uri=http://localhost:8888/callback" _
+		  + "&code_verifier=" + CodeVerifier
+		  ExchangeConnection.SetRequestContent(Body, "application/x-www-form-urlencoded")
 		  ExchangeConnection.Send("POST", "https://identity.xero.com/connect/token")
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events TenantsButton
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  TenantsConnection.RequestHeader("Authorization") = "Bearer " + AccessTokenField.Text
 		  TenantsConnection.RequestHeader("Content-Type") = "application/json"
 		  TenantsConnection.Send("GET", "https://api.xero.com/connections")
+		  
+		  TenantRequestHeaders.RemoveAllRows
+		  TenantRequestHeaders.AddRow("Authorization", "Bearer " + AccessTokenField.Text)
+		  TenantRequestHeaders.AddRow("Content-Type", "application/json")
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events CallButton
+#tag Events EndpointMenu
 	#tag Event
-		Sub Action()
+		Sub SelectionChanged(item As DesktopMenuItem)
+		  #Pragma Unused item
+		  
+		  idField.Enabled = me.SelectedRowIndex > 2
+		  EndpointButton.Enabled = me.SelectedRowIndex < 3
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events EndpointButton
+	#tag Event
+		Sub Pressed()
 		  If CommandMenu.SelectedRowIndex < 0 _
 		    Or EndpointMenu.SelectedRowIndex < 0 _
 		    Or TenantsMenu.SelectedRowIndex < 0 Then
 		    Return
 		  End If
 		  
-		  Var TenantID As String = TenantsMenu.RowTagAt(TenantsMenu.SelectedRowIndex)
-		  Var EndPoint As String = EndpointMenu.SelectedRow
-		  Var Command As String = CommandMenu.SelectedRow
+		  Var EndPoint As String = EndpointMenu.SelectedRowValue + If(idField.Text.Length > 0, "/" + idField.Text, "")
+		  URLField.Text = "https://api.xero.com/api.xro/2.0/" + EndPoint
 		  
-		  Connection.ClearRequestHeaders
-		  Connection.RequestHeader("Authorization") = "Bearer " + AccessTokenField.Text
-		  Connection.RequestHeader("Accept") = "application/json"
-		  Connection.RequestHeader("Xero-tenant-id") = TenantID
-		  Connection.Send(Command, "https://api.xero.com/api.xro/2.0/" + EndPoint)
+		  CallTheApi()
+		  
+		  idField.Text = ""
 		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events RefreshButton
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  RefreshConnection.ClearRequestHeaders
 		  
 		  Var RequestContent As String = "grant_type=refresh_token" _
@@ -2123,12 +2344,12 @@ End
 #tag EndEvents
 #tag Events GenerateExchangeURLButton
 	#tag Event
-		Sub Action()
-		  ExchangeBodyField.Text = "grant_type=authorization_code" _
-		  + "&client_id=" + ClientIDField.Text _
-		  + "&code=" + TempCodeField.Text _
-		  + "&redirect_uri=http://localhost:8888/callback" _
-		  + "&code_verifier=" + CodeVerifierField.Text
+		Sub Pressed()
+		  ExchangeBodyField.Text = "grant_type=authorization_code" + EndOfLine _
+		  + "&client_id=" + ClientIDField.Text + EndOfLine _
+		  + "&code=" + TempCodeField.Text + EndOfLine _
+		  + "&redirect_uri=http://localhost:8888/callback" + EndOfLine _
+		  + "&code_verifier=" + CodeVerifier
 		  
 		  RetrieveTokensButton.Enabled = True
 		End Sub
@@ -2136,11 +2357,11 @@ End
 #tag EndEvents
 #tag Events ScopesList
 	#tag Event
-		Sub Change()
+		Sub SelectionChanged()
 		  If me.SelectedRowIndex < 0 Then
 		    Return
 		  End If
-		  ScopesMenu.AddRow(me.CellValueAt(me.SelectedRowIndex, 0))
+		  ScopesMenu.AddRow(me.CellTextAt(me.SelectedRowIndex, 0))
 		  me.RemoveRowAt(me.SelectedRowIndex)
 		End Sub
 	#tag EndEvent
@@ -2161,22 +2382,76 @@ End
 #tag EndEvents
 #tag Events GenerateCodeVerifierButton
 	#tag Event
-		Sub Action()
-		  CodeVerifierField.Text = GenerateVerifier()
+		Sub Pressed()
+		  CodeVerifier = GenerateVerifier()
+		  Var w As New CodeVerifierWindow
+		  w.ShowModal(CodeVerifier)
 		  GenerateLinkButton.Enabled = True
 		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
+#tag Events idField
+	#tag Event
+		Sub TextChanged()
+		  EndpointButton.Enabled = me.Text.Length > 0
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events URLField
+	#tag Event
+		Sub TextChanged()
+		  CallButton.Enabled = me.Text.Length > 0
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events CallButton
+	#tag Event
+		Sub Pressed()
+		  CallTheApi()
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Label23
+	#tag Event
+		Function MouseDown(x As Integer, y As Integer) As Boolean
+		  #Pragma Unused x
+		  #Pragma Unused y
+		  
+		  Return True
+		  
+		End Function
+	#tag EndEvent
+	#tag Event
+		Sub MouseUp(x As Integer, y As Integer)
+		  #Pragma Unused x
+		  #Pragma Unused y
+		  
+		  ShowURL("https://developer.xero.com")
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub MouseEnter()
+		  MouseCursor = System.Cursors.FingerPointer
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub MouseExit()
+		  MouseCursor = System.Cursors.StandardPointer
+		End Sub
+	#tag EndEvent
+#tag EndEvents
 #tag Events AuthStages
 	#tag Event
-		Sub Paint(g As Graphics, areas() As REALbasic.Rect)
+		Sub Paint(g As Graphics, areas() As Rect)
 		  #Pragma Unused areas
 		  
-		  g.DrawPicture(If(StagePanel.SelectedPanelIndex = 1 Or StagePanel.SelectedPanelIndex = 0, Part1, Part1blurred), 0, 0)
-		  g.DrawPicture(If(StagePanel.SelectedPanelIndex = 2 Or StagePanel.SelectedPanelIndex = 0, Part2, Part2blurred), 0, Part1.Height)
-		  g.DrawPicture(If(StagePanel.SelectedPanelIndex = 3 Or StagePanel.SelectedPanelIndex = 0, Part3, Part3blurred), 0, Part1.Height + Part2.Height)
-		  g.DrawPicture(If(StagePanel.SelectedPanelIndex = 4 Or StagePanel.SelectedPanelIndex = 0, Part4, Part4blurred), 0, Part1.Height + Part2.Height + Part3.Height)
+		  g.DrawPicture(If(StagePanel.SelectedPanelIndex = 2, Part1Highlighted, Part1), 0, 0)
+		  g.DrawPicture(If(StagePanel.SelectedPanelIndex = 3, Part2Highlighted, Part2), 0, Part1.Height)
+		  g.DrawPicture(If(StagePanel.SelectedPanelIndex = 4, Part3Highlighted, Part3), 0, Part1.Height + Part2.Height)
+		  g.DrawPicture(If(StagePanel.SelectedPanelIndex = 5, Part4Highlighted, Part4), 0, Part1.Height + Part2.Height + Part3.Height)
 		  
 		End Sub
 	#tag EndEvent
@@ -2197,7 +2472,7 @@ End
 		    IssuedByLabel.Text = JWT.Issuer
 		    Var Interval As DateInterval = JWT.LoadedExpiresAt - JWT.NotBeforeDate
 		    ValidBetweenLabel.Text = JWT.NotBeforeDate.ToString(DateTime.FormatStyles.Short, DateTime.FormatStyles.Short) + " for " + Interval.Minutes.ToString + " minutes"
-		    MoveOnTimer.RunMode = Timer.RunModes.Single
+		    REM MoveOnTimer.RunMode = Timer.RunModes.Single
 		  Else
 		    MessageBox("A Status of " + HTTPStatus.ToString + " has been received when exchanging tokens.")
 		  End If
@@ -2216,7 +2491,8 @@ End
 		    TenantsList.RemoveAllRows
 		    For i As Integer = 0 To v.LastIndex
 		      Var tenant As Dictionary = v(i)
-		      TenantsMenu.AddRow(tenant.Value("tenantName"))
+		      Var s As String = tenant.Value("tenantName")
+		      TenantsMenu.AddRow(s)
 		      TenantsMenu.RowTagAt(TenantsMenu.LastAddedRowIndex) = tenant.Value("tenantId")
 		      TenantsList.AddRow(tenant.Value("tenantId"), tenant.Value("tenantName"))
 		    Next
@@ -2224,7 +2500,7 @@ End
 		    CommandMenu.Enabled = True
 		    EndpointMenu.Enabled = True
 		    CallButton.Enabled = True
-		    MoveOnTimer.RunMode = Timer.RunModes.Single
+		    REM MoveOnTimer.RunMode = Timer.RunModes.Single
 		    If TenantsMenu.RowCount = 1 Then
 		      TenantsMenu.SelectedRowIndex = 0
 		    End If
@@ -2490,8 +2766,8 @@ End
 		Visible=true
 		Group="Background"
 		InitialValue="&hFFFFFF"
-		Type="Color"
-		EditorType="Color"
+		Type="ColorGroup"
+		EditorType="ColorGroup"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Backdrop"
@@ -2506,7 +2782,7 @@ End
 		Visible=true
 		Group="Menus"
 		InitialValue=""
-		Type="MenuBar"
+		Type="DesktopMenuBar"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
@@ -2516,5 +2792,13 @@ End
 		InitialValue="True"
 		Type="Boolean"
 		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="CodeVerifier"
+		Visible=false
+		Group="Behavior"
+		InitialValue=""
+		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 #tag EndViewBehavior

@@ -1,5 +1,5 @@
-#tag Window
-Begin Window AuthorizeWindow
+#tag DesktopWindow
+Begin DesktopWindow AuthorizeWindow
    Backdrop        =   0
    BackgroundColor =   &cFFFFFF00
    Composite       =   False
@@ -24,11 +24,12 @@ Begin Window AuthorizeWindow
    Type            =   1
    Visible         =   True
    Width           =   800
-   Begin HTMLViewer Authorizer
-      AllowAutoDeactivate=   True
+   Begin DesktopHTMLViewer Authorizer
+      AutoDeactivate  =   True
       Enabled         =   True
       Height          =   760
       Index           =   -2147483648
+      InitialParent   =   ""
       Left            =   20
       LockBottom      =   True
       LockedInPosition=   False
@@ -46,7 +47,7 @@ Begin Window AuthorizeWindow
       Width           =   760
    End
 End
-#tag EndWindow
+#tag EndDesktopWindow
 
 #tag WindowCode
 	#tag Method, Flags = &h0
@@ -58,9 +59,11 @@ End
 
 	#tag Method, Flags = &h0
 		Function ShowModal(URL As String) As String
-		  // Calling the overridden superclass method.
 		  Authorizer.LoadURL(URL)
+		  
+		  // Calling the overridden superclass method.
 		  Super.ShowModal()
+		  
 		  Return Result
 		End Function
 	#tag EndMethod
@@ -80,20 +83,32 @@ End
 #tag Events Authorizer
 	#tag Event
 		Function CancelLoad(URL as String) As Boolean
-		  // Need to have this here due to macOS not giving us this URL in DocumentComplete
+		  #If Not TargetMacOS
+		    #Pragma Unused URL
+		  #Endif
 		  
-		  If url.BeginsWith("http://localhost:8888/callback") Then
-		    Result = url
-		    Timer.CallLater(0, AddressOf CloseWindow) ' Closing the window from here will crash the app, so push the close into the next event loop
-		  End If
+		  // Need to have this here due to macOS not giving us this URL in DocumentComplete
+		  #If TargetMacOS
+		    If url.BeginsWith("http://localhost:8888/callback") Then
+		      Result = url
+		      Timer.CallLater(0, AddressOf CloseWindow) ' Closing the window from here will crash the app, so push the close into the next event loop
+		    End If
+		  #endif
 		End Function
 	#tag EndEvent
 	#tag Event
 		Sub DocumentComplete(url as String)
-		  If url.BeginsWith("http://localhost:8888/callback") Then
-		    Result = url
-		    Self.Close
-		  End If
+		  #If Not TargetWindows
+		    #Pragma Unused url
+		  #Endif
+		  
+		  // Windows builds use Chromium under the hood which means this is the best place for this code
+		  #If TargetWindows
+		    If url.BeginsWith("http://localhost:8888/callback") Then
+		      Result = url
+		      CloseWindow
+		    End If
+		  #endif
 		  
 		End Sub
 	#tag EndEvent
@@ -308,8 +323,8 @@ End
 		Visible=true
 		Group="Background"
 		InitialValue="&hFFFFFF"
-		Type="Color"
-		EditorType="Color"
+		Type="ColorGroup"
+		EditorType="ColorGroup"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Backdrop"
@@ -324,7 +339,7 @@ End
 		Visible=true
 		Group="Menus"
 		InitialValue=""
-		Type="MenuBar"
+		Type="DesktopMenuBar"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
